@@ -1,0 +1,30 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build static files
+      run: npm run build
+
+    - name: Deploy to Hostinger
+      uses: easingthemes/ssh-deploy@main
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SOURCE: "out/"
+        REMOTE_HOST: 193.19.106.44
+        REMOTE_USER: u710390021
+        REMOTE_PORT: 65002
+        TARGET: /home/u710390021/domains/iglumelajes.com.br/public_html/calculadora-lajes
