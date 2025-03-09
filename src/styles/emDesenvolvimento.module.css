@@ -1,0 +1,142 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Fundo semitransparente com mais contraste */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000;
+  padding: 10px; /* Para garantir espaço em telas pequenas */
+}
+
+/* Container Principal */
+.mainContainer {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); /* Sombra mais sutil e elegante */
+  text-align: center;
+  overflow: hidden;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* Título e Ícone de Fechar */
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.titleContainer p {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.titleContainer svg {
+  color: #f59d0d; /* Cor para destacar o ícone de fechar */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.titleContainer svg:hover {
+  color: #c9302c;
+}
+
+/* Imagem */
+.imageContainer {
+  margin: 15px 0;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Mensagem */
+.messageContainer p {
+  font-size: 1em;
+  font-weight: 500;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Animações para uma experiência de transição suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.mainContainer {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    max-width: 90%; /* Ajusta largura do modal */
+    padding: 20px; /* Reduz o padding interno */
+  }
+
+  .titleContainer p {
+    font-size: 1em; /* Reduz o tamanho da fonte do título */
+  }
+
+  .titleContainer svg {
+    width: 25px; /* Reduz o tamanho do ícone de fechar */
+    height: 25px;
+  }
+
+  .messageContainer p {
+    font-size: 0.9em; /* Ajusta tamanho da mensagem */
+  }
+
+  .imageContainer img {
+    max-width: 80%; /* Reduz a imagem para caber melhor em telas menores */
+  }
+}
+
+/* Telas menores que 480px (smartphones menores) */
+@media (max-width: 480px) {
+  .mainContainer {
+    padding: 15px; /* Reduz ainda mais o padding */
+  }
+
+  .titleContainer p {
+    font-size: 0.8em; /* Reduz o título ainda mais */
+  }
+
+  .titleContainer svg {
+    width: 40px; /* Reduz o título ainda mais */
+  }
+
+  .messageContainer p {
+    font-size: 0.7em; /* Fonte menor para mensagens */
+  }
+
+  .imageContainer img {
+    max-width: 100%; /* Ajusta imagem para smartphones menores */
+  }
+}

@@ -1,0 +1,147 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.mainContainer {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  max-height: 170vw;
+  overflow-y: auto;
+}
+
+.headContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.headContainer svg {
+  color: #f59d0d;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.headContainer svg:hover {
+  color: #d9534f;
+}
+
+.mainContainer h1 {
+  font-size: 24px;
+  color: #f59d0d;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cardsContainer {
+  margin: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  
+}
+
+.cardLaje {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  height: 200px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.cardLaje img {
+  border-radius: 8px;
+  margin: auto;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0px 0;
+}
+
+.inputsContainer div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputsContainer label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  /* display: block; */
+  font-weight: bold;
+}
+
+.inputsContainer select,
+.inputsContainer .textBox {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputsContainer select:focus,
+.inputsContainer .textBox:focus {
+  border-color: #f59d0d;
+}
+
+.submitButton {
+  background-color: #f59d0d;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.submitButton:hover {
+  background-color: rgb(245, 156, 13);
+  transform: scale(1.02);
+}

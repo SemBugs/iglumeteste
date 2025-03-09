@@ -1,0 +1,16 @@
+{
+  "apoio_viga": 0.15,
+  "apoio_vao_oposto":0.10,
+  "hf": 6,
+  "fck": 25,
+  "fyk": 60,
+  "agregado": "bassalto",
+  "carga_revestimento": 70,
+  "psi_2": 0.3,
+  "fluencia": 2.5,
+  "delta": 1,
+  "alphaC": 0.85,
+  "etaC": 1,
+  "lbda": 0.8,
+  "gama_contreto":25
+}
