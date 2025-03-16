@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /tests
+
+Sitemap: https://iglumelajes.com.br/calculadora-lajes/sitemap.xml
